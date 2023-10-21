@@ -6,24 +6,33 @@ import Course from './components/Course';
 import AllCourses from './components/AllCourses';
 import AddCourse from './components/AddCourse';
 import Header from './components/Header';
+import Menus from './components/Menus';
+import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 
 function App() {
 
   return (
     <div>
-      <Header/>
+      <Router>
 
-      <Container>
-        <Row>
-          <Col md={4}>
-            <h2>This is menu side</h2>
-          </Col>
-          <Col md={8}>
-            <h2>This is content side</h2>
-          </Col>
-        </Row>
-      </Container>
+        <Header/>
 
+        <Container>
+          <Row>
+            <Col md={4}>
+              <Menus/>
+            </Col>
+            <Col md={8}>
+              <Routes>
+              <Route path='/' Component={Home} exact/>
+              <Route path='/add-course' Component={AddCourse} exact/>
+              <Route path='/view-courses' Component={AllCourses} exact/>
+              </Routes>
+            </Col>
+          </Row>
+        </Container>
+
+      </Router>
     </div>
   );
 }

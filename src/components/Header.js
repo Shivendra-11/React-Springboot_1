@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-        <h1>Welcome to Courses Application</h1>
+        <h2 className='text-center my-5'>Welcome to Courses Application</h2>
     </div>
   )
 }
