@@ -1,7 +1,31 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import Course from './Course'
+import axios from 'axios'
+import base_url from '../api/springbootapi'
+import { toast } from 'react-toastify'
 
 const AllCourses = () => {
+
+  /* useEffect(() => {
+    alert("testing");
+  },[]) */
+
+    const getAllCourses = () => {
+      axios.get(`${base_url}/courses`).then(
+        (Response) => {
+          console.log(Response.data);
+          toast.success("courses has been loaded");
+        },
+        (Error) => {
+          console.log(Error);
+          toast.error("Something went wrong");
+        }
+      );
+    };
+
+    useEffect(() => {
+      getAllCourses();
+    });
 
     const [courses, setCourses] = useState([
         {title: "Android developement Course", description:"It is just a demo course with no API calling till now."},
@@ -15,7 +39,7 @@ const AllCourses = () => {
         <p className='mx-5'>List of all courses are as follows: </p>
 
         {courses.length>0
-        ? courses.map((item)=> <Course course={item}/>)
+        ? courses.map((item)=> <Course /* /* key={item.id} */ course={item}/>)
         : "No Courses"
         }
     </div>
