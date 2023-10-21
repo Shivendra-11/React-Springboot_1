@@ -3,12 +3,12 @@ import { Button, Card, CardBody, CardSubtitle, CardText, Container } from 'react
 
 const Course = ({course}) => {
   return (
-    <Card>
+    <Card className='my-5 mx-5'>
         <CardBody>
             <CardSubtitle className='font-weight-bold text-center'>{course.title}</CardSubtitle>
-            <CardText>{course.description}</CardText>
+            <CardText className='text-center'>{course.description}</CardText>
             <Container className='text-center'>
-                <Button color='danger'>Delete</Button>
+                <Button color='danger mx-5'>Delete</Button>
                 <Button color='warning'>Update</Button>
             </Container>
         </CardBody>
