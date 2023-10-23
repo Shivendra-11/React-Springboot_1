@@ -7,6 +7,8 @@ import AllCourses from './components/AllCourses';
 import AddCourse from './components/AddCourse';
 import Header from './components/Header';
 import Menus from './components/Menus';
+import About from './components/About';
+import Contact from './components/Contact';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 
 function App() {
@@ -16,8 +18,6 @@ function App() {
 
 <ToastContainer/>
       <Router>
-
-        //Router tag is required to carry out routing of page.
 
         <Header/>
 
@@ -31,6 +31,8 @@ function App() {
               <Route path='/' Component={Home} exact/>
               <Route path='/add-course' Component={AddCourse} exact/>
               <Route path='/view-courses' Component={AllCourses} exact/>
+              <Route path='/about' Component={About} exact/>
+              <Route path='/contact' Component={Contact} exact/>
               </Routes>
             </Col>
           </Row>

@@ -31,6 +31,7 @@ const AllCourses = () => {
         {title: "Android developement Course", description:"It is just a demo course with no API calling till now."},
         {title: "Spring Boot Course", description:"It is just a demo course with no API calling till now."},
         {title: "MERN Introduction Course", description:"It is just a demo course with no API calling till now."},
+        {title: "ML introduction Course", description: "It is a demo course with stuff related to machine learning."}
     ])
 
   return (
