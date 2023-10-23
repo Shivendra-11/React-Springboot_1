@@ -17,6 +17,8 @@ function App() {
 <ToastContainer/>
       <Router>
 
+        //Router tag is required to carry out routing of page.
+
         <Header/>
 
         <Container>
