@@ -15,12 +15,9 @@ function App() {
 
   return (
     <div>
-
-<ToastContainer/>
       <Router>
 
         <Header/>
-
         <Container>
           <Row>
             <Col md={4}>

@@ -6,15 +6,15 @@ import Course from './Course'
 
 const Home = () => {
 
-  const btnHandle = () => {
-    toast.success("Success")
-  }
+  // const btnHandle = () => {
+  //   toast.success("Success")
+  // }
 
   return (
     <div>
-        <ToastContainer/>
+      <ToastContainer/>
       <h1 className='mx-5 my-5'>Spring-Boot Application</h1>
-      <Button color='primary text-center mx-5' size='lg' outline onClick={btnHandle}>Create a toast</Button>
+      <Button color='primary text-center mx-5' size='lg' outline>Create a toast</Button>
       <Course course={{title: "Android developement Course", description: "This course contains tutorials about all the basic implementations of android app."}}/>
     </div>
   )
