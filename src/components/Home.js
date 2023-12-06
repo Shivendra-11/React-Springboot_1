@@ -13,8 +13,8 @@ const Home = () => {
   return (
     <div>
       <ToastContainer/>
-      <h1 className='mx-5 my-5'>Spring-Boot Application</h1>
-      <Button color='primary text-center mx-5' size='lg' outline>Create a toast</Button>
+      <h1 className='mx-5 my-5'>Spring-Boot Application using React </h1>
+      <Button color='primary text-center mx-5' size='lg' outline>Create a toast    </Button>
       <Course course={{title: "Android developement Course", description: "This course contains tutorials about all the basic implementations of android app."}}/>
     </div>
   )
